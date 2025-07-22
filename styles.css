@@ -1,0 +1,377 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 15px;
+  background-color: hsl(180, 52%, 96%);
+  color: hsl(180, 14%, 20%);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.header {
+  background-color: hsl(180, 29%, 50%);
+  height: 156px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Main content */
+.main {
+  margin-top: -40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Filter bar */
+.filter-bar {
+  background: white;
+  border-radius: 5px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 15px 20px -5px rgba(13, 113, 130, 0.15);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.filter-bar.hidden {
+  display: none;
+}
+
+.filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  flex: 1;
+}
+
+.filter-tag {
+  display: flex;
+  align-items: center;
+  background-color: hsl(180, 52%, 96%);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.filter-tag span {
+  padding: 8px 8px 8px 12px;
+  font-weight: 700;
+  color: hsl(180, 29%, 50%);
+  font-size: 13px;
+}
+
+.filter-tag button {
+  background-color: hsl(180, 29%, 50%);
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.filter-tag button:hover {
+  background-color: hsl(180, 14%, 20%);
+}
+
+.filter-tag button img {
+  width: 14px;
+  height: 14px;
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  color: hsl(180, 8%, 52%);
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.clear-btn:hover {
+  color: hsl(180, 29%, 50%);
+}
+
+/* Job listings */
+.job-listings {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.job-card {
+  background: white;
+  border-radius: 5px;
+  padding: 24px;
+  box-shadow: 0 15px 20px -5px rgba(13, 113, 130, 0.15);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-2px);
+}
+
+.job-card.featured {
+  border-left: 5px solid hsl(180, 29%, 50%);
+}
+
+.job-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.company-logo {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.job-info {
+  flex: 1;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.company-name {
+  font-weight: 700;
+  color: hsl(180, 29%, 50%);
+  font-size: 14px;
+}
+
+.job-badge {
+  padding: 6px 8px 4px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.1px;
+}
+
+.badge-new {
+  background-color: hsl(180, 29%, 50%);
+  color: white;
+}
+
+.badge-featured {
+  background-color: hsl(180, 14%, 20%);
+  color: white;
+}
+
+.job-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: hsl(180, 14%, 20%);
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.job-title:hover {
+  color: hsl(180, 29%, 50%);
+}
+
+.job-details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: hsl(180, 8%, 52%);
+  font-size: 15px;
+  flex-wrap: wrap;
+}
+
+.job-details span:not(:last-child)::after {
+  content: "•";
+  margin-left: 8px;
+  color: hsl(180, 8%, 52%);
+}
+
+.job-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid hsl(180, 8%, 90%);
+}
+
+.job-tag {
+  background-color: hsl(180, 52%, 96%);
+  color: hsl(180, 29%, 50%);
+  padding: 8px 8px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.job-tag:hover {
+  background-color: hsl(180, 29%, 50%);
+  color: white;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .header {
+    height: 156px;
+  }
+  
+  .main {
+    margin-top: -20px;
+  }
+  
+  .container {
+    padding: 0 24px;
+  }
+  
+  .job-card {
+    padding: 36px 24px 24px;
+    margin-top: 12px;
+    position: relative;
+  }
+  
+  .job-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+  
+  .company-logo {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: -12px;
+    left: 24px;
+  }
+  
+  .job-info {
+    width: 100%;
+  }
+  
+  .job-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .job-tags {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid hsl(180, 8%, 90%);
+    width: 100%;
+  }
+  
+  .filter-bar {
+    padding: 20px;
+  }
+  
+  .filter-tags {
+    gap: 12px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .job-card {
+    padding: 32px 40px;
+    margin-top: 0;
+  }
+  
+  .job-header {
+    align-items: center;
+    flex-direction: row;
+    gap: 24px;
+  }
+  
+  .company-logo {
+    width: 88px;
+    height: 88px;
+    position: static;
+  }
+  
+  .job-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .job-tags {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    margin-left: auto;
+  }
+  
+  .filter-bar {
+    padding: 20px 40px;
+  }
+}
+
+/* Attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 40px 0 20px;
+  color: hsl(180, 8%, 52%);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/* Loading state */
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: hsl(180, 8%, 52%);
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: hsl(180, 8%, 52%);
+}
+
+.empty-state h2 {
+  color: hsl(180, 14%, 20%);
+  margin-bottom: 8px;
+}

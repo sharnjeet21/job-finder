@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Job Listings</title>
+</head>
+<body>
+  <header class="header">
+    <picture>
+      <source media="(min-width: 768px)" srcset="./images/bg-header-desktop.svg">
+      <img src="./images/bg-header-mobile.svg" alt="" class="header-bg">
+    </picture>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <!-- Filter bar will be inserted here by JavaScript -->
+      <div id="filter-bar" class="filter-bar hidden">
+        <div class="filter-tags" id="filter-tags"></div>
+        <button class="clear-btn" id="clear-filters">Clear</button>
+      </div>
+
+      <!-- Job listings will be inserted here by JavaScript -->
+      <div id="job-listings" class="job-listings"></div>
+    </div>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
