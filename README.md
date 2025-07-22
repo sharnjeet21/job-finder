@@ -134,9 +134,9 @@ In future versions, I plan to:
 
 ## 👤 Author
 
-- Website: [Your Portfolio](https://sharn-portfolio.vercel.app/)
-- Frontend Mentor: [@yourusername](https://www.frontendmentor.io/profile/sharnjeet21)
-- GitHub: [@yourusername](https://github.com/sharnjeet21)
+- Website: [Sharnjeet Singh](https://sharn-portfolio.vercel.app/)
+- Frontend Mentor: [@sharnjeet21](https://www.frontendmentor.io/profile/sharnjeet21)
+- GitHub: [@sharnjeet21](https://github.com/sharnjeet21)
 ---
 
 ## 🙏 Acknowledgments
